@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-pj&h#b7q@-m*%8zt!+_lpvn+!oxhiudq8w*pvch-ot86)b(2)8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1","localhost","ifraheem.pythonanywhere.com", "perfect-tutu-calf.cyclic.app"]
 
 
 # Application definition
