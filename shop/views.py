@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Product, Contact, Order, OrderUpdate
 from math import ceil
 import json
-
+from django.views.decorators.csrf import csrf_protect
 
 def index(request):
     allProds = []
@@ -24,6 +24,7 @@ def searchMatch(query, item):
         return True
     else:
         return False
+
 def search(request):
     query = request.GET.get('search')
     allProds = []
@@ -45,6 +46,7 @@ def about(request):
     return render(request, 'shop/about.html')
 
 
+@csrf_protect
 def contact(request):
     thank = False
     if request.method == "POST":
@@ -58,6 +60,7 @@ def contact(request):
     return render(request, 'shop/contact.html',{'thank': thank})
 
 
+@csrf_protect
 def tracker(request):
     if request.method == "POST":
         orderId = request.POST.get('orderId', '')
@@ -86,6 +89,7 @@ def productview(request, myid):
     return render(request, 'shop/prodView.html', {'product': product[0]})
 
 
+@csrf_protect
 def checkout(request):
     if request.method == "POST":
         name = request.POST.get('name', ' ')
