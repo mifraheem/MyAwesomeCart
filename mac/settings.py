@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-pj&h#b7q@-m*%8zt!+_lpvn+!oxhiudq8w*pvch-ot86)b(2)8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost","ifraheem.pythonanywhere.com", "perfect-tutu-calf.cyclic.app"]
+ALLOWED_HOSTS = ["127.0.0.1","localhost"]
 
 
 # Application definition
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
