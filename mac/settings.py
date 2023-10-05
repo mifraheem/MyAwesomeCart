@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-pj&h#b7q@-m*%8zt!+_lpvn+!oxhiudq8w*pvch-ot86)b(2)8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost", "web-production-82c7.up.railway.app", "https://web-production-82c7.up.railway.app/"]
+ALLOWED_HOSTS = ["127.0.0.1","localhost", "web-production-82c7.up.railway.app"]
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # 'django.contrib.staticfiles',
+    'django.contrib.staticfiles',
     'blog',
 
 ]
@@ -122,8 +122,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 # managing media of project....
-# STATIC_URL = '/static/'
-
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
